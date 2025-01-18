@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  --sb-track-color: #fff;
+  --sb-thumb-color: #c1c1e0;
+  --sb-size: 14px;
+}
+
+.todoContainer {
+  width: 450px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 15px 15px 15px #80808064, -15px -15px 15px #80808064;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.todoContainer h1 {
+  text-align: center;
+}
+.singleTodo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #0000ff6e;
+  border-radius: 8px;
+  color: white;
+  transition: 0.2s;
+}
+
+.singleTodo:hover {
+  padding: 30px 10px;
+}
+.actionsButton {
+  color: #fff;
+}
+.addTodo {
+  display: flex;
+  gap: 1rem;
+}
+.addTodo input {
+  flex-grow: 2;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.addTodo button {
+  flex-grow: 1;
+  border: none;
+  color: white;
+  background-color: #0000ff6e;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

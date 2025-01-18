@@ -51,7 +51,9 @@ export default function SingleTodo({
               );
               setTodos(updatedTodos);
               localStorage.setItem("todos", JSON.stringify(updatedTodos));
-              openAndHideToast("Todo completed successfully");
+              todo.isCompleted
+                ? openAndHideToast("Task removed from completed tasks")
+                : openAndHideToast("Todo completed successfully");
             }}
           >
             <CheckIcon />
